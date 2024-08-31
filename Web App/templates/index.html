@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Secure Web Application Development</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Define page background image */
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_1280.jpg');
+            background-size: cover; /* Cover the entire page */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-attachment: fixed; /* Fix the image in place */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Set a default font family */
+            color: white; /* Set text color to white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Define button container styles */
+        .button-container {
+            text-align: center; /* Center-align the buttons */
+            border: 1px solid #ccc; /* Add a border */
+            border-radius: 10px; /* Add border radius */
+            padding: 20px; /* Add padding */
+            background-color: rgba(249, 249, 249, 0.9); /* Set semi-transparent background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+            display: inline-block; /* Make the container inline-block */
+            color: black; /* Set text color to black inside the container */
+        }
+
+        /* Define button styles */
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Button hover animation */
+            margin: 10px; /* Add margin between buttons */
+        }
+
+        /* Button hover animation */
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <h1>Welcome to Secure Web Application Development</h1>
+        <a href="{{ url_for('signup') }}" class="button">Sign Up</a>
+        <a href="{{ url_for('login') }}" class="button">Login</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Secure Web Application Development</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Define page background image */
+        body {
+            background-image: url('https://www.arenawebsecurity.net/static/media/aws-banner1.3d1aff94.png');
+            background-size: cover; /* Cover the entire page */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-attachment: fixed; /* Fix the image in place */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Set a default font family */
+            color: white; /* Set text color to white */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Define paragraph text color */
+        p {
+            color: black; /* Set paragraph text color to black */
+        }
+
+        /* Define button styles */
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Button hover animation */
+        }
+
+        /* Button hover animation */
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    <p>What Is Web Security?
+Web security is a broad category of security solutions that protect your users, devices, and wider network against internet-based cyberattacks—malware, phishing, and more—that can lead to breaches and data loss. It reduces the security risk to your organization when your users accidentally access malicious files and websites through some combination of firewall inspection, intrusion prevention system (IPS) scanning, sandboxing, URL filtering, and various other security and access controls..</p>
+    <div class="button-container">
+        <a href="{{ url_for('login') }}" class="button">Logout</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - Secure Web Application Development</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Define page background image */
+        body {
+            background-image: url('https://bs-uploads.toptal.io/blackfish-uploads/components/seo/8023128/og_image/optimized/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-91ee4d294318c967b26187f4d67a8351.png');
+            background-size: cover; /* Cover the entire page */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-attachment: fixed; /* Fix the image in place */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Set a default font family */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white; /* Set text color to white */
+        }
+
+        /* Define button styles */
+        .button {
+            background-color: #007bff;
+            color: white; /* Set text color to white */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Button hover animation */
+            margin-right: 10px; /* Add margin between buttons */
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Button hover animation */
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Define form container styles */
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Set semi-transparent background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            color: white; /* Ensure text color is white */
+        }
+
+        /* Define form styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        a.button {
+            margin-top: 10px; /* Add margin to the home button */
+            display: inline-block; /* Ensure it appears as a button */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 style="color: white;">Sign Up</h1>
+        <form id="signup-form" action="{{ url_for('signup') }}" method="POST">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="username" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required>
+            <button type="submit" class="button">Sign Up</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="button">Home</a>
+    </div>
+</body>
+</html>
